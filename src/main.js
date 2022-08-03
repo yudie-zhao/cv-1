@@ -1,5 +1,8 @@
-let demo = document.querySelector('#demo');
+let html = document.querySelector('#html');
 let style = document.querySelector('#style');
+let div1 = document.querySelector('#div1')
+let div1Wrapper = document.querySelector('#div1wrapper')
+let height = document.documentElement.clientHeight
 let string = `/*你好，我叫小赵
 *接下来我要演示我的前端功底
 *首先我要准备一个 div
@@ -57,14 +60,20 @@ let step = () => {
         } else {
             string2 += string[n]
         }
-        demo.innerHTML = string2;
+        html.innerHTML = string2;
         style.innerHTML = string.substring(0, n);
-        window.scrollTo(0, 9999);
-        demo.scrollTo(0, 9999);
+        window.scrollTo(0, height);
+        html.scrollTo(0, height);
         if (n < string.length - 1) {
             n = n + 1;
             step();
         }
-    }, 50);
+    }, 10);
 }
 step();
+if ("ontouchstart" in window) {
+    html.style.height = "70vh"
+    html.style.overflow = "hidden"
+    div1Wrapper.style.height = "30vh"
+    div1.style.position = "relative"
+}
