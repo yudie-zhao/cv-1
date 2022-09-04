@@ -3,7 +3,7 @@ let style = document.querySelector('#style');
 let div1 = document.querySelector('#div1')
 let div1Wrapper = document.querySelector('#div1wrapper')
 let height = document.documentElement.clientHeight
-let string = `/*你好，我叫小赵
+let string = `/*你好，我叫赵钰蝶
 *接下来我要演示我的前端功底
 *首先我要准备一个 div
 */
@@ -73,7 +73,9 @@ let step = () => {
 step();
 if ("ontouchstart" in window) {
     html.style.height = "70vh"
-    html.style.overflow = "hidden"
+    html.style.overflow = "auto"
     div1Wrapper.style.height = "30vh"
-    div1.style.position = "relative"
+    div1.style.position = 'relative'
+    div1.style.bottom = '100%'
+    document.body.style.overflow = 'hidden'
 }

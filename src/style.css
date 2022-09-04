@@ -4,37 +4,30 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-}
-
-#div1::before {
+*::before,
+*::after {
     box-sizing: border-box;
-}
-
-#div1::after {
-    box-sizing: border-box;
-}
-
-#html {
-    word-break: break-all;
 }
 
 #div1 {
     position: fixed;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    top: 20px;
 }
 
 #div1::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
 }
 
 #div1::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
+}
+
+#html {
+    word-break: break-all;
 }
